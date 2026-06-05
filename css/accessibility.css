@@ -1,0 +1,160 @@
+html {
+    font-size: var(--medcheck-font-size, 16px);
+}
+
+body {
+    font-size: 1rem;
+}
+
+.settings-control {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 22px;
+    margin-bottom: 22px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+.settings-control h2 {
+    margin: 0 0 18px;
+    color: #0f172a;
+}
+
+.accessibility-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+}
+
+.accessibility-btn {
+    border: none;
+    padding: 12px 18px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #00bcd4, #4facfe);
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.accessibility-switch-box {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: #f8fafc;
+    border: 1px solid #dbe2ea;
+    border-radius: 12px;
+    color: #0f172a;
+    padding: 11px 16px;
+}
+
+.accessibility-switch {
+    position: relative;
+    width: 56px;
+    height: 30px;
+}
+
+.accessibility-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.accessibility-slider {
+    position: absolute;
+    inset: 0;
+    background: #cbd5e1;
+    border-radius: 999px;
+    cursor: pointer;
+}
+
+.accessibility-slider::before {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 3px;
+    top: 3px;
+    border-radius: 50%;
+    background: #ffffff;
+    transition: 0.25s;
+}
+
+.accessibility-switch input:checked + .accessibility-slider {
+    background: #00bcd4;
+}
+
+.accessibility-switch input:checked + .accessibility-slider::before {
+    transform: translateX(26px);
+}
+
+body.dark-mode {
+    background: #0f172a !important;
+    color: #e5edf7 !important;
+}
+
+body.dark-mode .topbar,
+body.dark-mode .sidebar,
+body.dark-mode .card,
+body.dark-mode .stat-card,
+body.dark-mode .search-card,
+body.dark-mode .table-card,
+body.dark-mode .session-card,
+body.dark-mode .booking-card,
+body.dark-mode .detail-box,
+body.dark-mode .profile-card,
+body.dark-mode .danger-card,
+body.dark-mode .popup-content,
+body.dark-mode .settings-control,
+body.dark-mode .accessibility-switch-box {
+    background: #1e293b !important;
+    border-color: #334155 !important;
+    color: #e5edf7 !important;
+}
+
+body.dark-mode .sidebar a,
+body.dark-mode .user,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode p,
+body.dark-mode td,
+body.dark-mode th,
+body.dark-mode span,
+body.dark-mode strong,
+body.dark-mode label,
+body.dark-mode .section-title h2,
+body.dark-mode .profile-details h2,
+body.dark-mode .view-item strong,
+body.dark-mode .manage-text h4,
+body.dark-mode .total-bookings {
+    color: #e5edf7 !important;
+}
+
+body.dark-mode .welcome,
+body.dark-mode .page-header {
+    background: linear-gradient(135deg, #0369a1 0%, #0f766e 100%) !important;
+    color: #ffffff !important;
+}
+
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea,
+body.dark-mode .view-item,
+body.dark-mode .manage-option,
+body.dark-mode .search-container,
+body.dark-mode .data-table thead tr,
+body.dark-mode table th {
+    background: #273449 !important;
+    border-color: #334155 !important;
+    color: #e5edf7 !important;
+}
+
+body.dark-mode .data-table tbody tr:hover {
+    background: #273449 !important;
+}
+
+body.dark-mode .popup {
+    background: rgba(2, 6, 23, 0.78) !important;
+}
